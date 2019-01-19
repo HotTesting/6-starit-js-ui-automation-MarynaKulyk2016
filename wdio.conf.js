@@ -1,5 +1,5 @@
-process.env.TS_NODE_FILES = true
-require('ts-node').register()
+process.env.TS_NODE_FILES = true;
+require('ts-node').register();
 
 exports.config = {
     specs: [
@@ -20,4 +20,4 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd'
     }
-}
+};
