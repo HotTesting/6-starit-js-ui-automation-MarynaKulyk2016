@@ -17,7 +17,7 @@ describe('Customer', function () {
     const informationLinks = $('#box-information-links');
 
     it("Opens cookie policy page", function() {
-        const cookiePolicy = informationLinks.$('.nav-pills li:first-of-type a');
+        const cookiePolicy = informationLinks.$('.nav-pills a[href*="cookie-policy"]');
         cookiePolicy.click();
         browser.pause(1000);
         const cookieTitle = browser.getTitle();
