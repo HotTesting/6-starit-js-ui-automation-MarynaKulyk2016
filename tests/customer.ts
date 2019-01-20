@@ -14,18 +14,29 @@ describe('Customer', function () {
         expect($('#box-customer-service').isVisible()).to.be.true;
     });
 
-    it("Fills in the form inputs", function() {
-        const contactForm = $('form[name="contact_form"]');
-        const contactEmail = contactForm.$('input[name="email"]');
+    it('Fills in the Contact form inputs', function() {
+        const formLocators = {
+            name: 'form[name="contact_form"] [name="name"]',
+            email: 'form[name="contact_form"] [name="email"]',
+            subject: 'form[name="contact_form"] [name="subject"]',
+            message: 'form[name="contact_form"] [name="message"]',
+            sendBtn: 'form[name="contact_form"] [name="send"]'
+        };
+        const successMessage = $('.alert-success');
 
-        contactEmail.addValue('wuxox@utoo.email');
-
-        browser.addValue('input[name="name"]', 'Test name');
-        browser.addValue('input[name="subject"]', 'Test subject');
-        browser.addValue('textarea[name="message"]', 'Test message');
-
-        $('button[name="send"]').click();
-        //TODO: fix after error won't appear
-        expect($('.alert-danger').isVisible()).to.be.true;
+        $(formLocators.name).setValue('Name text');
+        $(formLocators.email).setValue('address@mail.com');
+        $(formLocators.subject).setValue('Subject text');
+        $(formLocators.message).setValue('Message text');
+        $(formLocators.sendBtn).click();
+        expect(successMessage.isVisible()).to.be.true;
     });
+
+    // it("Shows error messages with bad credentials", function() {
+    //     const errorMessage = $('.alert-danger');
+    //
+    //     $(formLocators.name).setValue('Name text');
+    //     $(formLocators.sendBtn).click();
+    //     expect(errorMessage.isVisible()).to.be.true();
+    // });
 });
