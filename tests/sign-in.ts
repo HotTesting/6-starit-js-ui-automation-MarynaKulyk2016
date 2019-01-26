@@ -1,6 +1,6 @@
 import { expect } from "chai";
 
-describe('Sign in', function () {
+describe.skip('Sign in', function () {
     it("Opens sign in form", function() {
         const defaultMenu = $('#default-menu');
         const signInBlock = defaultMenu.$('.account a.dropdown-toggle');

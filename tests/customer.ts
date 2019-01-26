@@ -1,6 +1,6 @@
 import { expect } from "chai";
 
-describe('Customer', function () {
+describe.skip('Customer', function () {
     it("Opens customer service page", function() {
         const defaultMenu = $('#default-menu');
         const customerServiceLink = defaultMenu.$('.customer-service a');

@@ -21,13 +21,8 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd'
     },
-    beforeEach() {
-        console.log('before each describe');
-        it('Should open homepage', function () {
-            browser.url('/');
-            const title = browser.getTitle();
-            expect(title).to.be.equal('My Store | Online Store');
-        });
+    before: function() {
+        browser.url('/');
     }
 };
 
