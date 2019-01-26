@@ -1,12 +1,6 @@
 import { expect } from "chai";
 
 describe('Customer', function () {
-    it('Should open homepage', function () {
-        browser.url('/');
-        const title = browser.getTitle();
-        expect(title).to.be.equal('My Store | Online Store');
-    });
-
     it("Opens customer service page", function() {
         const defaultMenu = $('#default-menu');
         const customerServiceLink = defaultMenu.$('.customer-service a');

@@ -1,12 +1,6 @@
 import { expect } from "chai";
 
-describe.skip('Sign up', function () {
-    it('Should open homepage', function () {
-        browser.url('/');
-        const title = browser.getTitle();
-        expect(title).to.be.equal('My Store | Online Store');
-    });
-
+describe('Sign up', function () {
     it("Opens sign in form", function() {
         const signInBlock = $('.account a.dropdown-toggle');
         signInBlock.click();

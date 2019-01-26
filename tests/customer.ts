@@ -1,12 +1,6 @@
 import { expect } from "chai";
 
 describe('Customer', function () {
-    it('Should open homepage', function () {
-        browser.url('/');
-        const title = browser.getTitle();
-        expect(title).to.be.equal('My Store | Online Store');
-    });
-
     it("Opens customer service page", function() {
         const defaultMenu = $('#default-menu');
         const customerServiceLink = defaultMenu.$('.customer-service a');
@@ -34,12 +28,4 @@ describe('Customer', function () {
 
         expect(successMessage.isVisible()).to.be.true;
     });
-
-    // it("Shows error messages with bad credentials", function() {
-    //     const errorMessage = $('.alert-danger');
-    //
-    //     $(formLocators.name).setValue('Name text');
-    //     $(formLocators.sendBtn).click();
-    //     expect(errorMessage.isVisible()).to.be.true();
-    // });
 });

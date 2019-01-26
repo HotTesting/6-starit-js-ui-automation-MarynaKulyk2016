@@ -1,12 +1,6 @@
 import { expect } from "chai";
 
 describe('Sign in', function () {
-    it('Should open homepage', function () {
-        browser.url('/');
-        const title = browser.getTitle();
-        expect(title).to.be.equal('My Store | Online Store');
-    });
-
     it("Opens sign in form", function() {
         const defaultMenu = $('#default-menu');
         const signInBlock = defaultMenu.$('.account a.dropdown-toggle');
