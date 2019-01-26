@@ -12,7 +12,7 @@ describe('Customer', function () {
 
     it("Opens cookie policy page", function() {
         // const cookiePolicy = informationLinks.$('.nav-pills a[href*="cookie-policy"]');
-        const cookiePolicy = informationLinks.$('a[href*="cookie-policy"]');
+        const cookiePolicy = informationLinks.$('.page-3 a[href*="cookie-policy"]');
         cookiePolicy.click();
         browser.pause(1000);
         const cookieTitle = browser.getTitle();
