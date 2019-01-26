@@ -8,11 +8,11 @@ describe('Customer', function () {
         expect($('#box-customer-service').isVisible()).to.be.true;
     });
 
-    const informationLinks = $('#box-information-links');
+    const informationLinks = $('#box-information-links .nav-pills');
 
     it("Opens cookie policy page", function() {
         // const cookiePolicy = informationLinks.$('.nav-pills a[href*="cookie-policy"]');
-        const cookiePolicy = $('#box-information-links ul.nav-pills a[href*="cookie-policy"]');
+        const cookiePolicy = informationLinks.$('a[href*="cookie-policy"]');
         cookiePolicy.click();
         browser.pause(1000);
         const cookieTitle = browser.getTitle();
