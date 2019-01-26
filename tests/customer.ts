@@ -14,21 +14,24 @@ describe('Customer', function () {
         expect($('#box-customer-service').isVisible()).to.be.true;
     });
 
-    it('Fills in the Contact form inputs', function() {
-        const formLocators = {
-            name: 'form[name="contact_form"] [name="name"]',
-            email: 'form[name="contact_form"] [name="email"]',
-            subject: 'form[name="contact_form"] [name="subject"]',
-            message: 'form[name="contact_form"] [name="message"]',
-            sendBtn: 'form[name="contact_form"] [name="send"]'
-        };
+    it('Fills in the Contact form inputs with valid data', function() {
+        const contactForm = $('form[name="contact_form"]');
+
+        const contactEmail = contactForm.$('input[name="email"]');
+        const contactName = contactForm.$('input[name="name"]');
+        const contactSubject = contactForm.$('input[name="subject"]');
+        const contactMessage = contactForm.$('textarea[name="message"]');
+
+        const sendBtn = $('button[name="send"]');
         const successMessage = $('.alert-success');
 
-        $(formLocators.name).setValue('Name text');
-        $(formLocators.email).setValue('address@mail.com');
-        $(formLocators.subject).setValue('Subject text');
-        $(formLocators.message).setValue('Message text');
-        $(formLocators.sendBtn).click();
+        contactEmail.setValue('wuxox@utoo.email');
+        contactName.setValue('Test name');
+        contactSubject.setValue('Test subject');
+        contactMessage.setValue('Test message');
+
+        sendBtn.click();
+
         expect(successMessage.isVisible()).to.be.true;
     });
 

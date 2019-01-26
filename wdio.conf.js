@@ -20,4 +20,10 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd'
     }
+
+    // before: function () {
+    //     console.log('Lalala')
+    // }
 };
+
+
