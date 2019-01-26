@@ -21,6 +21,7 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd'
     },
+    waitforTimeout: 500,
     before: function() {
         browser.url('/');
     }
