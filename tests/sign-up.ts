@@ -29,14 +29,14 @@ describe.skip('Sign up', function () {
         const emailField = customerForm.$('input[name="email"]');
         const passwordField = customerForm.$('input[name="password"]');
         const confirmPasswordField = customerForm.$('input[name="confirmed_password"]');
-        const creareAccountBtn = customerForm.$('button[name="create_account"]');
+        const createAccountBtn = customerForm.$('button[name="create_account"]');
 
         firstNameField.setValue('First name');
         lastNameField.setValue('Last name');
         emailField.setValue(Math.random() + '@gmail.com');
         passwordField.setValue('123456');
         confirmPasswordField.setValue('123456');
-        creareAccountBtn.click();
+        createAccountBtn.click();
 
         const successMessage = $('.alert-success');
         expect(successMessage.isVisible()).to.be.true;

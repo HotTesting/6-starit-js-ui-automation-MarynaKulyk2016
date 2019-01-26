@@ -9,7 +9,8 @@ exports.config = {
     path: '/',
     services: ['chromedriver'],
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        maxInstances: 1
     }],
     sync: true,
     logLevel: 'silent',
@@ -20,10 +21,6 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd'
     }
-
-    // before: function () {
-    //     console.log('Lalala')
-    // }
 };
 
 
