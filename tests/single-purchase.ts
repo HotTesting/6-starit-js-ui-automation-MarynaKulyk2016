@@ -1,10 +1,12 @@
 import { expect } from "chai";
+import { PurchasePage } from '../pages/purchase.page';
 
-describe('Single purchase', function () {
-    it("Clicks the Popular tab", function() {
-        const popularTab = $('a[href*="popular-products"]');
-        popularTab.click();
-        expect($('#box-popular-products').isVisible()).to.be.true;
+const purchasePage = new PurchasePage();
+
+describe.only('Single purchase', function () {
+    it('Clicks the Popular tab', function () {
+        purchasePage.clickPopular();
+        // expect($('#box-popular-products').isVisible()).to.be.true;
     });
 
     it("Search red duck on the page", function() {
