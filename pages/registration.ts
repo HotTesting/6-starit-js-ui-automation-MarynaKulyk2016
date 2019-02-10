@@ -20,27 +20,22 @@ class Registration extends BasePage{
     }
 
     public typeLastName() {
-        $(this.lastNameField).waitForVisible();
         $(this.lastNameField).setValue('Last name');
     }
 
     public typeEmail() {
-        $(this.emailField).waitForVisible();
         $(this.emailField).setValue(Math.random() + '@gmail.com');
     }
 
     public typePassword() {
-        $(this.passwordField).waitForVisible();
         $(this.passwordField).setValue('123321');
     }
 
     public typeConfirmPassword() {
-        $(this.confirmPasswordField).waitForVisible();
         $(this.confirmPasswordField).setValue('123321');
     }
 
     public createAccount() {
-        $(this.createAccountBtn).waitForVisible();
         $(this.createAccountBtn).click();
     }
 }
