@@ -1,4 +1,5 @@
 import { BasePage } from './base';
+import * as faker from "faker";
 
 class Registration extends BasePage {
     private createAccountLink = 'a[href*="create_account"]';
@@ -16,15 +17,15 @@ class Registration extends BasePage {
 
     public typeFirstName() {
         $(this.firstNameField).waitForVisible();
-        $(this.firstNameField).setValue('First name');
+        $(this.firstNameField).setValue(faker.name.firstName());
     }
 
     public typeLastName() {
-        $(this.lastNameField).setValue('Last name');
+        $(this.lastNameField).setValue(faker.name.lastName());
     }
 
     public typeEmail() {
-        $(this.emailField).setValue(Math.random() + '@gmail.com');
+        $(this.emailField).setValue(faker.internet.email());
     }
 
     public typePassword() {

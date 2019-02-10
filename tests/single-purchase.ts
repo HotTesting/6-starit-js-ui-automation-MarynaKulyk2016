@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { checkout, productPopup, purchase, registration } from '../pages';
+import { checkout, productPopup, purchase } from '../pages';
 import { confirmation } from '../pages/confirmatiom';
 
 describe('Single purchase', function () {
