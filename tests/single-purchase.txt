@@ -3,7 +3,7 @@ import { PurchasePage } from '../pages/purchase.page';
 
 const purchasePage = new PurchasePage();
 
-describe.only('Single purchase', function () {
+describe('Single purchase', function () {
     it('Clicks the Popular tab', function () {
         purchasePage.clickPopular();
         // expect($('#box-popular-products').isVisible()).to.be.true;

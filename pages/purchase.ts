@@ -1,4 +1,4 @@
-export class PurchasePage {
+export class Purchase {
 
     private popularTab = $('a[href*="popular-products"]');
     // private popularProducts =  $('#box-popular-products');
