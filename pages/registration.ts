@@ -1,6 +1,6 @@
 import { BasePage } from './base';
 
-class Registration extends BasePage{
+class Registration extends BasePage {
     private createAccountLink = 'a[href*="create_account"]';
     private firstNameField = 'input[name="firstname"]';
     private lastNameField = 'input[name="lastname"]';
