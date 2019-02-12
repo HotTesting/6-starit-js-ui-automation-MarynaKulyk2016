@@ -2,19 +2,27 @@ import { expect } from "chai";
 import { checkout, productPopup, purchase } from '../pages';
 import { confirmation } from '../pages/confirmatiom';
 
-describe('Single purchase', function () {
-    it('Clicks the Popular tab', function () {
-        purchase.clickPopular();
-        expect($(purchase.popularProducts).isVisible()).to.be.true;
-    });
-
-    it("Search red duck on the page", function() {
-        purchase.openRedDuckItem();
+describe('Purchase N products', function () {
+    it("Search yellow duck on the page", function() {
+        purchase.openYellowDuckItem();
         expect(productPopup.isLoaded()).to.equal(
             true,
             "Expected that product box is displayed"
         );
-        expect(purchase.confirmationTitle()).to.equal('Red Duck');
+        expect(purchase.confirmationTitle()).to.equal('Yellow Duck');
+    });
+
+    // TODO: fix page object
+    it('Should demonstrate the selectByAttribute command', () => {
+        const selectBox = $('select[name="options[Size]"]');
+        const value = selectBox.getValue();
+        console.log(value);
+
+        selectBox.selectByAttribute('value', 'Medium');
+        console.log(selectBox.getValue()); // returns "someValue5"
+
+        let element = $('[value="Medium"]');
+        console.log(element.isSelected()); // outputs: true
     });
 
     it("Clicks the Buy button and close popup", function() {
