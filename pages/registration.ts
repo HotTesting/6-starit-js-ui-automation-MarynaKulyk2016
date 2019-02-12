@@ -25,7 +25,7 @@ class Registration extends BasePage {
     }
 
     public typeEmail() {
-        $(this.emailField).setValue(faker.internet.email());
+        $(this.emailField).setValue(Math.random() + '@gmail.com');
     }
 
     public typePassword() {

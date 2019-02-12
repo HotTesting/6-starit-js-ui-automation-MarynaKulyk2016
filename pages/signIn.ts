@@ -17,7 +17,7 @@ class SignIn extends BasePage{
     public login() {
         $(this.emailField).waitForVisible();
         $(this.emailField).setValue('wuxox@utoo.email');
-        $(this.passwordField).setValue('123321');
+        $(this.passwordField).setValue('123456');
         $(this.signInBtn).click();
     }
 }
