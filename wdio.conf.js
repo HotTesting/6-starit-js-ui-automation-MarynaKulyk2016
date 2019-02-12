@@ -22,7 +22,7 @@ exports.config = {
         ui: 'bdd'
     },
     waitforTimeout: 1000,
-    beforeEach: function() {
+    before: function() {
         browser.url('/');
     }
 };

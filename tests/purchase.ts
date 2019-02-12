@@ -55,7 +55,7 @@ describe('Purchase', function () {
     });
 
     it("Purchase product without size selection", function() {
-        browser.pause(3000);
+        browser.url('http://ip-5236.sunline.net.ua:38015');
         // open popular products tab
         purchase.clickPopular();
         expect($(purchase.popularProducts).isVisible()).to.be.true;
