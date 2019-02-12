@@ -1,17 +1,18 @@
 import { expect } from "chai";
 import { customer } from '../pages';
+import * as faker from "faker";
 
 describe('Customer', function () {
-    it("Opens customer service page", function() {
+    it('Send email to support', function() {
+        // Opens customer service page
         customer.clickCustomerServiceLink();
         expect($(customer.customerServiceBox).isVisible()).to.be.true;
-    });
 
-    it('Fills in the Contact form inputs with valid data', function() {
-        customer.typeName();
-        customer.typeEmail();
-        customer.typeSubject();
-        customer.typeMessage();
+        // Fills in the Contact form inputs and submit
+        customer.typeName(faker.name.firstName());
+        customer.typeEmail(faker.internet.email());
+        customer.typeSubject(faker.lorem.sentence());
+        customer.typeMessage(faker.lorem.paragraph());
 
         customer.clickSendButton();
 

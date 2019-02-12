@@ -5,6 +5,7 @@ import { BasePage } from './base';
 import { productPopup } from './productPopup';
 import { checkout } from './checkout';
 import { customer } from './customer'
+import { confirmation } from './confirmatiom'
 
 export {
     signIn,
@@ -13,5 +14,6 @@ export {
     purchase,
     productPopup,
     checkout,
-    customer
+    customer,
+    confirmation
 }

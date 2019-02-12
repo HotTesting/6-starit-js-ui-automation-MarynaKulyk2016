@@ -1,5 +1,4 @@
 import { BasePage } from './base';
-import * as faker from "faker";
 
 class Customer extends BasePage {
     public customerServiceBox = '#box-customer-service';
@@ -16,21 +15,21 @@ class Customer extends BasePage {
         $(this.customerServiceLink).click();
     }
 
-    public typeName() {
+    public typeName(name: string) {
         $(this.contactName).waitForVisible();
-        $(this.contactName).setValue(faker.name.firstName());
+        $(this.contactName).setValue(name);
     }
 
-    public typeEmail() {
-        $(this.contactEmail).setValue(faker.internet.email());
+    public typeEmail(email: string) {
+        $(this.contactEmail).setValue(email);
     }
 
-    public typeSubject() {
-        $(this.contactSubject).setValue(faker.lorem.sentence());
+    public typeSubject(subject: string) {
+        $(this.contactSubject).setValue(subject);
     }
 
-    public typeMessage() {
-        $(this.contactMessage).setValue(faker.lorem.paragraph());
+    public typeMessage(message: string) {
+        $(this.contactMessage).setValue(message);
     }
 
     public clickSendButton() {

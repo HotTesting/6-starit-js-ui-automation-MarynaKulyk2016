@@ -14,10 +14,10 @@ class SignIn extends BasePage{
         $(this.signInDropdown).click();
     }
 
-    public login() {
+    public login(email: string, password: string) {
         $(this.emailField).waitForVisible();
-        $(this.emailField).setValue('wuxox@utoo.email');
-        $(this.passwordField).setValue('123456');
+        $(this.emailField).setValue(email);
+        $(this.passwordField).setValue(password);
         $(this.signInBtn).click();
     }
 }

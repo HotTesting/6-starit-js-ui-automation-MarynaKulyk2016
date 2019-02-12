@@ -1,5 +1,4 @@
 import { BasePage } from './base';
-import * as faker from "faker";
 
 class Registration extends BasePage {
     private createAccountLink = 'a[href*="create_account"]';
@@ -15,25 +14,25 @@ class Registration extends BasePage {
         $(this.createAccountLink).click();
     }
 
-    public typeFirstName() {
+    public typeFirstName(firstName: string) {
         $(this.firstNameField).waitForVisible();
-        $(this.firstNameField).setValue(faker.name.firstName());
+        $(this.firstNameField).setValue(firstName);
     }
 
-    public typeLastName() {
-        $(this.lastNameField).setValue(faker.name.lastName());
+    public typeLastName(lastName: string) {
+        $(this.lastNameField).setValue(lastName);
     }
 
-    public typeEmail() {
-        $(this.emailField).setValue(Math.random() + '@gmail.com');
+    public typeEmail(email: string) {
+        $(this.emailField).setValue(email);
     }
 
-    public typePassword() {
-        $(this.passwordField).setValue('123321');
+    public typePassword(password: string) {
+        $(this.passwordField).setValue(password);
     }
 
-    public typeConfirmPassword() {
-        $(this.confirmPasswordField).setValue('123321');
+    public typeConfirmPassword(password: string) {
+        $(this.confirmPasswordField).setValue(password);
     }
 
     public createAccount() {

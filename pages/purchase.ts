@@ -6,7 +6,6 @@ class Purchase extends BasePage {
     private redDuck = 'a[title="Red Duck"]';
     private yellowDuck = 'a[title="Yellow Duck"]';
     private popularTab = 'a[href="#popular-products"]';
-    private selectBox = 'select[name="options[Size]"]';
 
     public clickPopular() {
         $(this.popularTab).click();
